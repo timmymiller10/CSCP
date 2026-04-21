@@ -2,7 +2,6 @@
 
 ## Planning Operations Road Map
 
-
 **Manufacturing Planning and Control (MPC)** process - This system is designed to balance demand-side requirements with supply-side capabilities through a series of integrated steps.
 
 ### Demand-Side Activities
@@ -81,5 +80,70 @@ The core output is the **Master Production Schedule (MPS)**, which acts as a "co
 * **For Sales**: Provides a clear "Available-to-Promise" figure to make reliable delivery commitments.
 * **For Operations**: Provides stability by preventing "nervousness" in the schedule and ensuring efficient use of labor and equipment.
 * **For the Company**: Minimizes inventory holding costs and reduces the risk of stockouts.
+
+## Commitment Decision Points
+
+**Commitment Decision Points** are negotiated milestones in a buyer-supplier relationship. They define exactly when demand information transitions from a "forecast" to a "firm contractual obligation."
+
+* These points are designed to prevent two common frustrations:
+  * Supplier Risk: The supplier builds capacity or inventory based on plans, but the buyer fails to place the expected orders.
+  * Buyer Risk: The buyer provides demand data, but the supplier fails to develop the necessary capacity to fulfill it.
+
+### The Three Purchase Commitment Zones**
+
+* By negotiating these decision points, organizations create three distinct zones that dictate the level of commitment:
+
+|Zone|Definition|Level of Commitment|
+|:---|:---|:---|
+|**Frozen Zone**|The period inside the Firm Commitment Decision Point (e.g., Weeks 1–3).|Orders are treated as firm purchase orders. Both the volume and the specific delivery timing are fixed.|
+|**Slushy Zone**|The period between the Firm and Volume Commitment Decision Points (e.g., Weeks 4–16).|The buyer is committed to the total volume, but retains the flexibility to shift priorities or timing.|
+|**Liquid Zone**|The period beyond the Volume Commitment Decision Point (e.g., Month 5+).|Demand data is for guidance only. There is no contractual commitment to buy or produce.|
+
+### Strategic Benefits
+
+* **Bilateral Accountability**: A formal trading partner agreement specifies how demand info is communicated and what each party is obligated to do.
+* **Transparency**: Suppliers feel comfortable committing to production schedules because they know which orders are guaranteed.
+* **Flexibility vs. Stability**: It allows for a long-term focus while providing enough stability to maintain fairness for both parties.
+
+### Placement of Decision Points
+
+The exact location of these points is not fixed; they are negotiated at the executive level based on:
+
+* Industry standards and market volatility.
+* Supplier and buyer lead times.
+* The desired balance between operational continuity and the ability to react to market changes.
+
+## Time Fences for Material Requirements Planning
+
+### Function and Purpose
+
+While Master Scheduling manages end-items, MRP time fences manage the specific "ingredients" required to build those items.
+
+* **Commitment**: They ensure that once materials are dedicated to a specific order, they are not "stolen" by other competing orders.
+* **Lead Time Management**: They help manage the Cumulative Lead Time—the longest total time required to accomplish an activity, accounting for every path in the Bill of Material (BOM).
+
+### The Two MRP Time Fences
+
+In an MRP environment, the fences are typically defined by the status of the material:
+
+* **Planning Time Fence**: Usually set at the moment the material is ordered or when production of the subcomponent begins.
+* **Demand Time Fence**: Usually set when the material is received or when the production of that specific component is complete.
+
+### Managing Complexity
+
+For products with deep Bills of Material (like a ship or an aircraft), there may be multiple, overlapping time fences:
+
+* **Early Stage**: A ship’s hull may have fences set months or years in advance.
+* **Middle Stage**: The engines and mechanical systems have their own set of fences.
+* **Late Stage**: Interior furnishings and cabin electronics have fences set much later in the production cycle.
+
+### The Balance: Stability vs. Flexibility
+
+The reading highlights a critical trade-off in using these fences:
+
+|The Need for Stability|The Need for Flexibility|
+|:--|:--|
+|Late changes cause "nervousness" in the system, leading to extra setups, expediting costs, and overtime.|Customers may cancel orders or request last-minute changes.|
+|Frequent rescheduling damages the perceived reliability of the master schedule.|Equipment failures, scrap/waste, or supplier delays may require a "pivot" in the plan.|
 
 # Materials and Inventory
