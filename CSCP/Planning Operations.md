@@ -146,4 +146,87 @@ The reading highlights a critical trade-off in using these fences:
 |Late changes cause "nervousness" in the system, leading to extra setups, expediting costs, and overtime.|Customers may cancel orders or request last-minute changes.|
 |Frequent rescheduling damages the perceived reliability of the master schedule.|Equipment failures, scrap/waste, or supplier delays may require a "pivot" in the plan.|
 
+---
+---
+
 # Materials and Inventory
+
+After finished goods are scheduled for production to satisfy demand, the necessary raw materials and components are calculated using material requirements planning (MRP). Also, inventory levels at specific locations are planned using distribution requirements planning (DRP). Besides discussing MRP and DRP, here we explain a number of manufacturing specifics: routing files, lot-for-lot or fixed order quantity replenishment, and offsetting.
+
+## Material Requirements Planning
+
+**Material Requirements Planning (MRP)** is a set of techniques used to calculate the exact materials and components needed to support the Master Production Schedule.
+
+Unlike finished goods, which face Independent Demand (based on forecasts), MRP manages Dependent Demand—requirements derived directly from the Bill of Material for other products.
+
+### Key MRP Inputs
+
+To function correctly, the MRP system requires four specific data inputs:
+
+* **Master Production Schedule (MPS)**: The "statement of intent" that lists what end items are to be produced and when.
+* **Inventory Status**: A real-time record of what is on hand, what is already on order (scheduled receipts), and lead times.
+* **Planning Factors**: Rules such as safety stock levels and lot-sizing logic.
+* **Bill of Material (BOM)**: The "product tree" or ingredient list that shows exactly how many sub-components make up one parent item.
+
+### The MRP Logic: Gross to Net
+
+The system performs a "gross-to-net" calculation to determine exactly what needs to be ordered:
+
+1. **Gross Requirements**: The total demand for a component in a specific period.
+2. **Net Requirements**: Calculated by subtracting inventory on hand and scheduled receipts from the gross requirements.
+3. **Offsetting**: The system counts backward from the required date by the component's Lead Time to determine the Planned Order Release date.
+
+### MRP Outputs
+
+The process generates several actionable documents and signals:
+
+* **Planned Order Receipts**: When the items are expected to arrive.
+* **Planned Order Releases**: When the buyer or shop floor needs to "hit the button" to start the order.
+* **Exception Reports**: Flags items that deviate from the plan (e.g., late deliveries or quantity mismatches).
+
+### Managing "System Nervousness"
+
+The text warns of **System Nervousness**—when frequent changes to the MPS or small adjustments in design cause a "butterfly effect" of rescheduling throughout the entire materials plan.
+
+* **Stability Tools**: To combat this, planners use **Time Fences** (to freeze the schedule) and **Pegging** (linking a component back to its specific parent) to see exactly which end orders will be impacted by a change.
+
+### Evolution to MRP II and ERP
+
+* **Closed-Loop MRP**: Adds a feedback loop to check if the shop floor actually has the capacity to execute the plan.
+* **MRP II (Manufacturing Resource Planning)**: Moves beyond just materials to include financials (dollars) and other functional areas like sales and human resources.
+* **ERP (Enterprise Resource Planning)**: The modern evolution that links all business functions and even supply chain partners into a single integrated system.
+
+## Distribution Requirements Planning (DRP)
+
+### Push vs. Pull Systems
+
+The text distinguishes between how inventory moves through the chain:
+
+* **Push System**: Decisions are centralized (usually at the factory). Inventory is "pushed" out to warehouses based on a central plan. This provides system-wide coordination but can be insensitive to local demand.
+* **Pull System**: Decisions are decentralized; each warehouse orders what it needs from the central supply. This is responsive to local markets but can lead to the **bullwhip effect** and lacks coordination between partners.
+* **DRP (The Hybrid)**: DRP combines both. It evaluates orders originating downstream (pull) at the central supplying location before releasing them (push) to ensure the entire network stays in balance.
+
+### Key DRP Inputs
+
+To create a resupply action plan, DRP integrates several data points:
+
+* **Demand Forecasts**: Planned order releases from all distribution centers to determine gross requirements.
+* **Customer Orders**: Real-time data on what is currently selling.
+* **Inventory Status**: What is on hand, in transit, and safety stock requirements.
+* **Distribution Network Map**: A "BOM-like" map showing how the warehouses and supply points are configured.
+
+### DRP Logic and The "Link" to Manufacturing
+
+DRP acts as the bridge between the marketplace and the factory floor. It uses **time-phased netting** (similar to MRP) to translate warehouse demand into a format the factory can use:
+
+1. **Gross Requirements** at the DC level are calculated.
+2. **Planned Order Releases** from the DCs become the **Gross Requirements** for the Central Supply.
+3. **Planned Order Releases** from Central Supply then become the **Gross Requirements** for the factory's **Master Production Schedule (MPS)**.
+
+* **Why it matters**: This allows a factory to plan its production runs based on actual distribution needs rather than just guessing what the warehouses might need later.
+
+### Benefits of DRP
+
+* **Accuracy**: Evaluates the needs of both the ordering and supplying locations to prevent shortages and overstocks.
+* **Efficiency**: Allows for smaller, more frequent orders, which improves customer service while lowering overall inventory costs.
+* **Coordination**: Keeps inventory in balance across the entire global network.
