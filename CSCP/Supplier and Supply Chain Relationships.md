@@ -413,3 +413,14 @@ The text utilizes Geert Hofstede’s framework to explain how different cultural
 |**Masculine vs. Feminine**|Masculine: Oriented toward achievement and speed. Feminine: Focus on quality of life and consensus.|	Masc: Japan, Italy. Fem: Netherlands, Thailand.|
 |**Long-Term Orientation**|Long-term: Values perseverance and thrift. Short-term: Values tradition and social obligations.|	Long: China, Brazil. Short: West Africa, U.S.|
 |**Indulgence vs. Restraint**|Indulgence: Allows gratification of desires. Restraint: Duty comes first; life is considered "hard."|Ind: Canada, U.S. Res: Pakistan, Russia.|
+
+### Practical SCM Considerations
+
+* **Language & Communication**: Miscommunication can impede working relationships. Some cultures (like the Chinese) rely heavily on nonverbal behavior and context, whereas Western cultures are more direct.
+* **Attitudes Toward Negotiation**: In India, business agreements may only happen after establishing a personal relationship; legalistic methods can be misconstrued.
+* **Business Etiquette**: Small gestures matter—for example, in Japan, a business card is treated as an extension of the person and should be accepted with both hands.
+* **Work Values**: In the U.S., a "get-down-to-business" mentality prevails, while in other cultures, the head of a group is expected to speak authoritatively for the whole.
+
+### Avoiding Stereotypes
+
+The reading warns that while these models help analyze general populations, there are always exceptions. Organizational missions can create internal cultures that differ from the surrounding local culture.
